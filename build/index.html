@@ -10,14 +10,66 @@
 
   <body class="page__body">
     <header class="header">
+      <a class="header__logo" href="#">
+        <picture>
+          <img src="" alt="Логотип Drink2Go.">
+        </picture>
+      </a>
 
+      <h1 class="header__title">Интернет-магазин<br> кофейных напитков</h1>
+
+      <nav class="header__nav">
+        <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+          <input class="header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
+          <div class="header__nav-hamburger">
+            <span class="header__nav-hamburger-line header__nav-hamburger-line--1"></span>
+            <span class="header__nav-hamburger-line header__nav-hamburger-line--2"></span>
+            <span class="header__nav-hamburger-line header__nav-hamburger-line--3"></span>
+          </div>
+
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item--current">
+              <a class="header__nav-link">Главная</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Каталог</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Доставка</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О нас</a>
+            </li>
+          </ul>
+
+          <ul class="header__nav-user-list">
+            <li class="header__nav-user-item header__nav-user-item--current">
+              <a class="header__nav-user-link" href="#">
+                <svg class="header__nav-user-icon" width="16" height="16" fill="currentColor">
+                  <title>Войти в аккаунт.</title>
+                  <use href=""></use>
+                </svg>
+                <span class="header__nav-user-title">Войти</p>
+              </a>
+            </li>
+            <li class="header__nav-user-item">
+              <a class="header__nav-user-link" href="#">
+                <svg class="header__nav-user-icon" width="16" height="16" fill="currentColor">
+                  <title>Перейти в корзину.</title>
+                  <use href=""></use>
+                </svg>
+                <span class="header__nav-user-title">Корзина</p>
+              </a>
+            </li>
+          </ul>
+      </nav>
     </header>
 
-    <main>
-      
+    <main class="main">
+
     </main>
 
-    <footer>
+    <footer class="footer">
 
     </footer>
 
