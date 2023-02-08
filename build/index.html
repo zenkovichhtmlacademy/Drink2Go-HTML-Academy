@@ -169,7 +169,268 @@
       </section>
 
       <section class="catalog">
-        <h2>Каталог кофейных напитков</h2>
+        <div class="catalog__heading">
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
+
+          <span class="catalog__subtitle">Каталог</span>
+        </div>
+
+        <div class="catalog__form-wrapper">
+          <h3 class="visually-hidden">Фильтр каталога.</h3>
+
+          <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="get">
+            <fieldset class="form__fieldset price-form">
+              <legend class="form__legend">Цена</legend>
+
+              <div class="price-form__scale scale">
+                <div class="scale__bar">
+                  <div class="scale__range">
+                    <button type="scale__button scale__button--min" name="button-min"></button>
+                    <button type="scale__button scale__button--max" name="button-max"></button>
+                  </div>
+                </div>
+              </div>
+
+              <input class="price-form__min" type="number" autocomplete="off" name="min-price" value="0" min="0" max="999">
+              <div class="price-form__divider"></div>
+              <input class="price-form__max" type="number" autocomplete="off" name="max-price" value="900" min="1" max="1000">
+            </fieldset>
+
+            <fieldset class="form__fieldset radio-form">
+              <legend class="form__legend">Наличие молока</legend>
+
+              <ul class="radio-form__list">
+                <li class="radio-form__item">
+                  <label class="radio-form__control custom-radio">
+                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="not-matter" checked>
+                    <span class="custom-radio__mark"></span>
+                    <span class="custom-radio__title input-label-text">Неважно</span>
+                  </label>
+                </li>
+
+                <li class="radio-form__item">
+                  <label class="radio-form__control custom-radio">
+                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="only-animals-milk">
+                    <span class="custom-radio__mark"></span>
+                    <span class="custom-radio__title input-label-text">Только животное</span>
+                  </label>
+                </li>
+
+                <li class="radio-form__item">
+                  <label class="radio-form__control custom-radio">
+                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="only-vegetable-milk">
+                    <span class="custom-radio__mark"></span>
+                    <span class="custom-radio__title input-label-text">Только растительное</span>
+                  </label>
+                </li>
+
+                <li class="radio-form__item">
+                  <label class="radio-form__control custom-radio">
+                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="without-milk" disabled>
+                    <span class="custom-radio__mark"></span>
+                    <span class="custom-radio__title input-label-text">Без молока</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset class="form__fieldset checkbox-form">
+              <legend class="form__legend">Страна производства</legend>
+
+              <ul class="checkbox-form__list">
+                <li class="checkbox-form__item">
+                  <label class="checkbox-form__control custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="brazil" checked>
+                    <span class="custom-checkbox__mark"></span>
+                    <span class="custom-checkbox__title input-label-text">Бразилия</span>
+                  </label>
+                </li>
+
+                <li class="checkbox-form__item">
+                  <label class="checkbox-form__control custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="ethiopia">
+                    <span class="custom-checkbox__mark"></span>
+                    <span class="custom-checkbox__title input-label-text">Эфиопия</span>
+                  </label>
+                </li>
+
+                <li class="checkbox-form__item">
+                  <label class="checkbox-form__control custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="colombia">
+                    <span class="custom-checkbox__mark"></span>
+                    <span class="custom-checkbox__title input-label-text">Колумбия</span>
+                  </label>
+                </li>
+
+                <li class="checkbox-form__item">
+                  <label class="checkbox-form__control custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="costa-rica">
+                    <span class="custom-checkbox__mark"></span>
+                    <span class="custom-checkbox__title input-label-text">Коста-Рика</span>
+                  </label>
+                </li>
+
+                <li class="checkbox-form__item">
+                  <label class="checkbox-form__control custom-checkbox">
+                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="peru" disabled>
+                    <span class="custom-checkbox__mark"></span>
+                    <span class="custom-checkbox__title input-label-text">Перу</span>
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button class="form__button form__button--submit" type="submit">Применить фильтр</button>
+            <button class="form__button form__button--reset" type="reset">Сбросить фильтр</button>
+          </form>
+        </div>
+
+        <div class="catalog__results-wrapper">
+          <label class="catalog__sort-label" for="sort-order">Сортировка:</label>
+
+          <select class="catalog__sort select" name="sort-order" id="sort-order">
+            <option class="select__option" value="default">по умолчанию</option>
+            <option class="select__option" value="expensive">сначала дорогие</option>
+            <option class="select__option" value="cheap">сначала дешёвые</option>
+            <option class="select__option" value="highrate">высокий рейтинг</option>
+          </select>
+
+          <div class="catalog__results">
+            <h3 class="visually-hidden">Результаты поиска.</h3>
+
+            <ul class="catalog__results-list">
+              <li class="goods__results-item good-item">
+                <a class="good-item__image-link" href="#">
+                  <picture class="good-item__image">
+                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee бежевого цвета.">
+                  </picture>
+                </a>
+
+                <a class="good-item__title-link" href="#">
+                  <h4 class="good-item__title">Декаф Флэт Уайт</h4>
+                </a>
+
+                <p class="good-item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+
+                <span class="good-item__price">225₽</span>
+
+                <a class="good-item__button" href="#">В корзину</a>
+              </li>
+
+              <li class="goods__results-item good-item">
+                <a class="good-item__image-link" href="#">
+                  <picture class="good-item__image">
+                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee фиолетового цвета.">
+                  </picture>
+                </a>
+
+                <a class="good-item__title-link" href="#">
+                  <h4 class="good-item__title">Декаф Флэт Уайт</h4>
+                </a>
+
+                <p class="good-item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+
+                <span class="good-item__price">225₽</span>
+
+                <a class="good-item__button" href="#">В корзину</a>
+              </li>
+
+              <li class="goods__results-item good-item">
+                <a class="good-item__image-link" href="#">
+                  <picture class="good-item__image">
+                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee чёрного цвета.">
+                  </picture>
+                </a>
+
+                <a class="good-item__title-link" href="#">
+                  <h4 class="good-item__title">Декаф Флэт Уайт</h4>
+                </a>
+
+                <p class="good-item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+
+                <span class="good-item__price">225₽</span>
+
+                <a class="good-item__button" href="#">В корзину</a>
+              </li>
+
+              <li class="goods__results-item good-item">
+                <a class="good-item__image-link" href="#">
+                  <picture class="good-item__image">
+                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee малинового цвета.">
+                  </picture>
+                </a>
+
+                <a class="good-item__title-link" href="#">
+                  <h4 class="good-item__title">Декаф Флэт Уайт</h4>
+                </a>
+
+                <p class="good-item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+
+                <span class="good-item__price">225₽</span>
+
+                <a class="good-item__button" href="#">В корзину</a>
+              </li>
+
+              <li class="goods__results-item good-item">
+                <a class="good-item__image-link" href="#">
+                  <picture class="good-item__image">
+                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee карамельного цвета.">
+                  </picture>
+                </a>
+
+                <a class="good-item__title-link" href="#">
+                  <h4 class="good-item__title">Декаф Флэт Уайт</h4>
+                </a>
+
+                <p class="good-item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+
+                <span class="good-item__price">225₽</span>
+
+                <a class="good-item__button" href="#">В корзину</a>
+              </li>
+
+              <li class="goods__results-item good-item">
+                <a class="good-item__image-link" href="#">
+                  <picture class="good-item__image">
+                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee светло-карамельного цвета.">
+                  </picture>
+                </a>
+
+                <a class="good-item__title-link" href="#">
+                  <h4 class="good-item__title">Декаф Флэт Уайт</h4>
+                </a>
+
+                <p class="good-item__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+
+                <span class="good-item__price">225₽</span>
+
+                <a class="good-item__button" href="#">В корзину</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="pagination-display-control">
+            <ul class="pagination">
+              <li class="pagination-item pagination-current">
+                <a class="pagination-link">1</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">2</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">3</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">4</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">...</a>
+              </li>
+              <li class="pagination-item">
+                <a class="pagination-link" href="#">10</a>
+              </li>
+            </ul>
+        </div>
 
       </section>
 
