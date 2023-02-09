@@ -10,6 +10,8 @@
 
     <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font">
     <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font">
     <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
     <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font">
@@ -22,7 +24,9 @@
         <div class="header__logo-wrapper">
           <a class="header__logo" href="index.html">
             <picture>
-              <img src="" width="32" height="36" alt="Логотип Drink2Go.">
+              <source media="(min-width: 1440px)" srcset="img/d2g-logo-large.svg" width="170" height="36">
+              <source media="(min-width: 768px)" srcset="img/d2g-logo-middle.svg" width="82" height="36">
+              <img src="img/d2g-logo-small.svg" width="32" height="36" alt="Логотип Drink2Go.">
             </picture>
           </a>
 
@@ -32,13 +36,15 @@
         <nav class="header__nav">
           <h2 class="visually-hidden">Основная навигация.</h2>
 
-          <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+          <div class="header__nav-button">
+            <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
 
-          <input class="header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
-          <div class="header__nav-hamburger">
-            <span class="header__nav-hamburger-line header__nav-hamburger-line--1"></span>
-            <span class="header__nav-hamburger-line header__nav-hamburger-line--2"></span>
-            <span class="header__nav-hamburger-line header__nav-hamburger-line--3"></span>
+            <input class="header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
+            <div class="header__nav-hamburger">
+              <span class="header__nav-hamburger-line header__nav-hamburger-line--1"></span>
+              <span class="header__nav-hamburger-line header__nav-hamburger-line--2"></span>
+              <span class="header__nav-hamburger-line header__nav-hamburger-line--3"></span>
+            </div>
           </div>
 
           <ul class="header__nav-list">
@@ -63,7 +69,7 @@
               <a class="header__nav-user-link" href="#">
                 <svg class="header__nav-user-icon" width="16" height="16" fill="currentColor">
                   <title>Войти в аккаунт.</title>
-                  <use href=""></use>
+                  <use href="img/icons/stack.svg#user-icon"></use>
                 </svg>
                 <span class="header__nav-user-title">Войти</span>
               </a>
@@ -72,7 +78,7 @@
               <a class="header__nav-user-link" href="#">
                 <svg class="header__nav-user-icon" width="16" height="16" fill="currentColor">
                   <title>Перейти в корзину.</title>
-                  <use href=""></use>
+                  <use href="img/icons/stack.svg#cart-icon"></use>
                 </svg>
                 <span class="header__nav-user-title">Корзина</span>
               </a>
