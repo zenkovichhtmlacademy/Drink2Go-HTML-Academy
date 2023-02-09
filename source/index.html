@@ -10,7 +10,7 @@
 
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="#">
+      <a class="header__logo" href="index.html">
         <picture>
           <img src="" alt="Логотип Drink2Go.">
         </picture>
@@ -424,7 +424,7 @@
 
               <ul class="pagination__list">
                 <li class="pagination__item">
-                  <a class="pagination-button">1</a>
+                  <a class="pagination-button" href="#">1</a>
                 </li>
 
                 <li class="pagination__item">
@@ -445,23 +445,121 @@
                     </svg>
                   </picture>
                 </span>
-                <span class="pagination__previous-label">Назад</span>
+                <span class="pagination__previous-label">Вперёд</span>
               </a>
             </nav>
           </div>
-
         </div>
-
       </section>
 
-      <section class="map">
-        <h2>Наш адрес</h2>
-
+      <section class="map-section">
+        <h2 сlass="visually-hidden">Наш адрес</h2>
+        <div class="map-section__map-container map">
+          <iframe class="map__embedded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8301744005792!2d30.31430331609816!3d59.96814048188694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2sNaberezhnaya%20Reki%20Karpovki%2C%205%2C%20Sankt-Peterburg%2C%20Russia%2C%20197022!5e0!3m2!1sen!2skz!4v1675927662991!5m2!1sen!2skz"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
+      <a class="footer__logo" href="index.html">
+        <picture>
+          <img src="" alt="Логотип Drink2Go.">
+        </picture>
+      </a>
 
+      <div class="footer__social-list-wrapper">
+        <h2 class="visually-hidden">Наши социальные сети.</h2>
+        <ul class="footer__social-list social-list">
+          <li class="social-list__item">
+            <a class="social-list__button" href="https://vk.com/htmlacademy">
+              <svg class="social-list__icon" width="20" height="20" fill="currentColor">
+                <use href="img/sprite/sprite.svg#vk-logo"></use>
+              </svg>
+              <span class="visually-hidden">ВКонтакте.</span>
+            </a>
+          </li>
+
+          <li class="social-list__item">
+            <a class="social-list__button" href="https://pinterest.com">
+              <svg class="social-list__icon" width="20" height="20" fill="currentColor">
+                <use href="img/sprite/sprite.svg#pinterest-logo"></use>
+              </svg>
+              <span class="visually-hidden">Pinterest.</span>
+            </a>
+          </li>
+
+          <li class="social-list__item">
+            <a class="social-list__button" href="https://ok.com">
+              <svg class="social-list__icon" width="20" height="20" fill="currentColor">
+                <use href="img/sprite/sprite.svg#ok-logo"></use>
+              </svg>
+              <span class="visually-hidden">Одноклассники.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__nav">
+        <div class="footer__nav-list-wrapper">
+          <h2 class="footer__nav-heading">Интернет-магазигн</h2>
+
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">Каталог</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">Доставка</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">Способы оплаты</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">О нас</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-list-wrapper">
+          <h2 class="footer__nav-heading">Медиа</h2>
+
+          <ul class="footer__nav-list">
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">Блог</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">Информация для СМИ</a>
+            </li>
+
+            <li class="footer__nav-item">
+              <a class="footer__nav-link">Правовая информация</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__nav-list-wrapper">
+          <h2 class="footer__nav-heading">Контакты</h2>
+
+          <address class="footer__nav-contacts contacts">
+            <a class="contacts__address" href="https://go.2gis.com/3o9ry5">Санкт-Петербург, набережная реки Карповки, дом 5</a>
+            <a class="contacts__phone" href="tel:+79999999999">+7 (999) 999-99-99</a>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__credits">
+        <a class="footer__credits-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span>Разработано в HTML Academy</span>
+          <svg class="footer__credits-icon" width="12" height="16" fill="currentColor">
+            <use href="img/sprite/sprite.svg#academy-logo"></use>
+          </svg>
+        </a>
+      </div>
     </footer>
 
     <script src="./js/script.js" defer></script>
