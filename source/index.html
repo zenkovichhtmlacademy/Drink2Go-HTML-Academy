@@ -5,21 +5,35 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preload" href="fonts/Montserrat-Regular.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
   </head>
 
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <picture>
-          <img src="" alt="Логотип Drink2Go.">
-        </picture>
-      </a>
+      <div class="header__container">
+        <div class="header__logo-wrapper">
+          <a class="header__logo" href="index.html">
+            <picture>
+              <img src="" width="32" height="36" alt="Логотип Drink2Go.">
+            </picture>
+          </a>
 
-      <h1 class="header__title">Интернет-магазин<br> кофейных напитков</h1>
+          <h1 class="header__title">Интернет-магазин<br> кофейных напитков</h1>
+        </div>
 
-      <nav class="header__nav">
-        <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+        <nav class="header__nav">
+          <h2 class="visually-hidden">Основная навигация.</h2>
+
+          <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+
           <input class="header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
           <div class="header__nav-hamburger">
             <span class="header__nav-hamburger-line header__nav-hamburger-line--1"></span>
@@ -42,6 +56,8 @@
             </li>
           </ul>
 
+          <h2 class="visually-hidden">Пользовательское меню.</h2>
+
           <ul class="header__nav-user-list">
             <li class="header__nav-user-item header__nav-user-item--current">
               <a class="header__nav-user-link" href="#">
@@ -49,7 +65,7 @@
                   <title>Войти в аккаунт.</title>
                   <use href=""></use>
                 </svg>
-                <span class="header__nav-user-title">Войти</p>
+                <span class="header__nav-user-title">Войти</span>
               </a>
             </li>
             <li class="header__nav-user-item">
@@ -58,11 +74,12 @@
                   <title>Перейти в корзину.</title>
                   <use href=""></use>
                 </svg>
-                <span class="header__nav-user-title">Корзина</p>
+                <span class="header__nav-user-title">Корзина</span>
               </a>
             </li>
           </ul>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <main class="main">
@@ -74,7 +91,7 @@
           <li class="hero__item">
             <a class="hero__item-image-link" href="#">
               <picture class="hero__item-image">
-                <img src="" alt="Жестяная баночка Drink2Go Decaf Flat White бежевого цвета на фоне брызгов молока.">
+                <img src="" width="280" height="280px" alt="Жестяная баночка Drink2Go Decaf Flat White бежевого цвета на фоне брызгов молока.">
               </picture>
             </a>
 
@@ -96,7 +113,7 @@
           <li class="hero__item">
             <a class="hero__item-image-link" href="#">
               <picture class="hero__item-image">
-                <img src="" alt="Жестяная баночка Drink2Go Lavender Latte лавандового цвета на фоне веточек лаванды.">
+                <img src="" width="280" height="280px" alt="Жестяная баночка Drink2Go Lavender Latte лавандового цвета на фоне веточек лаванды.">
               </picture>
             </a>
 
@@ -118,7 +135,7 @@
           <li class="hero__item">
             <a class="hero__item-image-link" href="#">
               <picture class="hero__item-image">
-                <img src="" alt="Жестяная баночка Drink2Go Triple Espresso чёрного цвета на фоне зёрен кофе.">
+                <img src="" width="280" height="280px" alt="Жестяная баночка Drink2Go Triple Espresso чёрного цвета на фоне зёрен кофе.">
               </picture>
             </a>
 
@@ -185,8 +202,8 @@
               <div class="price-form__scale scale">
                 <div class="scale__bar">
                   <div class="scale__range">
-                    <button type="scale__button scale__button--min" name="button-min"></button>
-                    <button type="scale__button scale__button--max" name="button-max"></button>
+                    <button class="scale__button scale__button--min" type="button" name="button-min"></button>
+                    <button class="scale__button scale__button--max" type="button" name="button-max"></button>
                   </div>
                 </div>
               </div>
@@ -299,7 +316,7 @@
             <h3 class="visually-hidden">Результаты поиска.</h3>
 
             <ul class="catalog__results-list">
-              <li class="goods__results-item good-item">
+              <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
                     <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee бежевого цвета.">
@@ -317,7 +334,7 @@
                 <a class="good-item__button" href="#">В корзину</a>
               </li>
 
-              <li class="goods__results-item good-item">
+              <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
                     <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee фиолетового цвета.">
@@ -335,7 +352,7 @@
                 <a class="good-item__button" href="#">В корзину</a>
               </li>
 
-              <li class="goods__results-item good-item">
+              <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
                     <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee чёрного цвета.">
@@ -353,7 +370,7 @@
                 <a class="good-item__button" href="#">В корзину</a>
               </li>
 
-              <li class="goods__results-item good-item">
+              <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
                     <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee малинового цвета.">
@@ -371,7 +388,7 @@
                 <a class="good-item__button" href="#">В корзину</a>
               </li>
 
-              <li class="goods__results-item good-item">
+              <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
                     <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee карамельного цвета.">
@@ -389,7 +406,7 @@
                 <a class="good-item__button" href="#">В корзину</a>
               </li>
 
-              <li class="goods__results-item good-item">
+              <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
                     <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee светло-карамельного цвета.">
@@ -409,15 +426,14 @@
             </ul>
 
             <nav class="catalog__results-pagination pagination">
+              <h3 class="visually-hidden">Выбор страницы каталога.</h3>
 
               <a class="pagination__previous pagination-button" href="#">
                 <span class="pagination__previous-icon">
-                  <picture>
-                    <svg width="10" height="10" fill="currentColor">
-                      <title>Назад.</title>
-                      <use href=""></use>
-                    </svg>
-                  </picture>
+                  <svg width="10" height="10" fill="currentColor">
+                    <title>Назад.</title>
+                    <use href=""></use>
+                  </svg>
                 </span>
                 <span class="pagination__previous-label">Назад</span>
               </a>
@@ -438,12 +454,10 @@
 
               <a class="pagination__next pagination-button" href="#">
                 <span class="pagination__next-icon">
-                  <picture>
-                    <svg width="10" height="10" fill="currentColor">
-                      <title>Вперёд.</title>
-                      <use href=""></use>
-                    </svg>
-                  </picture>
+                  <svg width="10" height="10" fill="currentColor">
+                    <title>Вперёд.</title>
+                    <use href=""></use>
+                  </svg>
                 </span>
                 <span class="pagination__previous-label">Вперёд</span>
               </a>
@@ -453,7 +467,7 @@
       </section>
 
       <section class="map-section">
-        <h2 сlass="visually-hidden">Наш адрес</h2>
+        <h2 class="visually-hidden">Наш адрес.</h2>
         <div class="map-section__map-container map">
           <iframe class="map__embedded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8301744005792!2d30.31430331609816!3d59.96814048188694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315bcebbd7f3%3A0xe0d833dfef898281!2sNaberezhnaya%20Reki%20Karpovki%2C%205%2C%20Sankt-Peterburg%2C%20Russia%2C%20197022!5e0!3m2!1sen!2skz!4v1675927662991!5m2!1sen!2skz"
             style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">

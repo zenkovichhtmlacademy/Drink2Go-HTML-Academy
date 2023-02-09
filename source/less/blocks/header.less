@@ -1,3 +1,41 @@
 .header {
-  
+  min-height: 60px;
+}
+
+.header__container {
+  box-sizing: border-box;
+  display: flex;
+  width: @mobile-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 20px;
+}
+
+.header__title {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.header__nav {
+  display: flex;
+}
+
+.header__nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header__nav-user-list {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
 }
