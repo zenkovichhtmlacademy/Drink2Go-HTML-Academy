@@ -16,6 +16,11 @@
   align-items: center;
   justify-content: flex-start;
   padding: 20px 20px 60px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column-reverse;
+    padding: 60px 80px 0;
+  }
 }
 
 .hero__item-background {
@@ -25,6 +30,10 @@
   left: 0;
   bottom: 0;
   z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    bottom: 188px;
+  }
 }
 
 .hero__item-background--first {
@@ -42,6 +51,11 @@
 .hero__item-image-link {
   margin: 0;
   margin-bottom: 10px;
+  line-height: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .hero__item-text {
@@ -52,22 +66,28 @@
 }
 
 .hero__item-title-link{
+  text-decoration: none;
+  text-align: center;
+  order: 1;
+}
+
+.hero__item-title {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
   line-height: 48px;
-  text-decoration: none;
-  text-align: center;
   letter-spacing: 0.02em;
   color: @base-black;
-  order: 1;
-}
-
-.hero__item-title {
   margin: 0;
   margin-bottom: 10px;
-  width: 280px;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
 }
 
 .hero__item-subtitle {
@@ -94,8 +114,13 @@
   color: #333333;
   margin: 0;
   margin-bottom: 20px;
-  width: 280px;
+  width: 100%;
   order: 2;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .hero__item-button-container {
@@ -104,6 +129,10 @@
   align-items: center;
   justify-content: flex-start;
   order: 3;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .hero__item-price {
