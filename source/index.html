@@ -20,7 +20,7 @@
 
   <body class="page__body">
     <header class="header">
-      <div class="header__container">
+      <div class="header__container header__container--nojs">
         <div class="header__logo-wrapper">
           <a class="header__logo" href="index.html">
             <picture>
@@ -33,35 +33,7 @@
           <h1 class="header__title">Интернет-магазин<br> кофейных напитков</h1>
         </div>
 
-        <nav class="header__nav">
-          <h2 class="visually-hidden">Основная навигация.</h2>
-
-          <div class="header__nav-button">
-            <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
-
-            <input class="header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
-            <div class="header__nav-hamburger">
-              <span class="header__nav-hamburger-line header__nav-hamburger-line--1"></span>
-              <span class="header__nav-hamburger-line header__nav-hamburger-line--2"></span>
-              <span class="header__nav-hamburger-line header__nav-hamburger-line--3"></span>
-            </div>
-          </div>
-
-          <ul class="header__nav-list">
-            <li class="header__nav-item header__nav-item--current">
-              <a class="header__nav-link">Главная</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Каталог</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">Доставка</a>
-            </li>
-            <li class="header__nav-item">
-              <a class="header__nav-link" href="#">О нас</a>
-            </li>
-          </ul>
-
+        <nav class="header__nav-user">
           <h2 class="visually-hidden">Пользовательское меню.</h2>
 
           <ul class="header__nav-user-list">
@@ -74,6 +46,7 @@
                 <span class="header__nav-user-title">Войти</span>
               </a>
             </li>
+
             <li class="header__nav-user-item">
               <a class="header__nav-user-link" href="#">
                 <svg class="header__nav-user-icon" width="16" height="16" fill="currentColor">
@@ -82,6 +55,39 @@
                 </svg>
                 <span class="header__nav-user-title">Корзина</span>
               </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__nav-button">
+          <label class="visually-hidden" for="nav-toggle">Раскрыть/скрыть меню.</label>
+
+          <input class="header__nav-toggle" type="checkbox" name="nav-toggle" id="nav-toggle">
+          <div class="header__nav-hamburger">
+            <span class="header__nav-hamburger-line header__nav-hamburger-line--1"></span>
+            <span class="header__nav-hamburger-line header__nav-hamburger-line--2"></span>
+            <span class="header__nav-hamburger-line header__nav-hamburger-line--3"></span>
+          </div>
+        </div>
+
+        <!-- Для отображения меню заменить модификатор объекта header__nav с closed на opened -->
+        <nav class="header__nav header__nav--opened">
+          <h2 class="visually-hidden">Основная навигация.</h2>
+
+          <ul class="header__nav-list">
+            <li class="header__nav-item header__nav-item--current">
+              <a class="header__nav-link">Главная</a>
+            </li>
+
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Каталог</a>
+            </li>
+
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">Доставка</a>
+            </li>
+            <li class="header__nav-item">
+              <a class="header__nav-link" href="#">О нас</a>
             </li>
           </ul>
         </nav>
@@ -325,7 +331,7 @@
               <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
-                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee бежевого цвета.">
+                    <img src="" width="130" height="188" alt="Жестяная баночка Drink2Go Speciality Coffee бежевого цвета.">
                   </picture>
                 </a>
 
@@ -343,7 +349,7 @@
               <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
-                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee фиолетового цвета.">
+                    <img src="" width="130" height="188" alt="Жестяная баночка Drink2Go Speciality Coffee фиолетового цвета.">
                   </picture>
                 </a>
 
@@ -361,7 +367,7 @@
               <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
-                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee чёрного цвета.">
+                    <img src="" width="130" height="188" alt="Жестяная баночка Drink2Go Speciality Coffee чёрного цвета.">
                   </picture>
                 </a>
 
@@ -379,7 +385,7 @@
               <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
-                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee малинового цвета.">
+                    <img src="" width="130" height="188" alt="Жестяная баночка Drink2Go Speciality Coffee малинового цвета.">
                   </picture>
                 </a>
 
@@ -397,7 +403,7 @@
               <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
-                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee карамельного цвета.">
+                    <img src="" width="130" height="188" alt="Жестяная баночка Drink2Go Speciality Coffee карамельного цвета.">
                   </picture>
                 </a>
 
@@ -415,7 +421,7 @@
               <li class="catalog__results-item good-item">
                 <a class="good-item__image-link" href="#">
                   <picture class="good-item__image">
-                    <img src="" alt="Жестяная баночка Drink2Go Speciality Coffee светло-карамельного цвета.">
+                    <img src="" width="130" height="188" alt="Жестяная баночка Drink2Go Speciality Coffee светло-карамельного цвета.">
                   </picture>
                 </a>
 
@@ -582,7 +588,7 @@
       </div>
     </footer>
 
-    <script src="./js/script.js" defer></script>
+    <script src="./js/scripts.js" defer></script>
   </body>
 
 </html>

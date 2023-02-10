@@ -1,5 +1,11 @@
 .header {
-  min-height: 60px;
+  position: static;
+  min-height: @header-height;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
 }
 
 .header__container {
@@ -7,13 +13,17 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
 
-  width: @mobile-width;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 0px;
-  padding-right: 0px;
-  padding-bottom: 0px;
+  padding: 0;
+  z-index: 2;
+}
+
+.header__logo-wrapper{
   padding-left: 20px;
 }
 
@@ -21,7 +31,7 @@
   display: block;
   box-sizing: border-box;
 
-  line-height: 0px;
+  line-height: 0;
 
   padding-top: 12px;
   padding-bottom: 12px;
@@ -35,15 +45,63 @@
   }
 }
 
-.header__nav {
+.header__nav-wrapper {
   display: flex;
-  flex-direction: row-reverse;
+}
+
+.header__nav {
+  position: static;
+  // display: flex;
+  // flex-direction: row-reverse;
+  top: -100%;
+  left: 0;
+  right: 0;
+
+  opacity: 0;
+  transition: top .4s ease-in-out, opacity .4s ease-in-out;
+
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header__nav--opened {
+  top: @header-height;
+  opacity: 1;
+}
+
+@media (max-width: @tablet-width - 1) {
+  .header__container--nojs {
+    display: grid;
+    grid-template-areas:
+    'logo usernav'
+    'nav nav';
+  }
+
+  .header__container--nojs .header__logo-wrapper {
+    grid-area: logo;
+  }
+
+  .header__container--nojs .header__nav-user {
+    grid-area: usernav;
+  }
+
+  .header__container--nojs .header__nav {
+    grid-area: nav;
+    position: static;
+  }
+
+  .header__container--nojs .header__nav-button {
+    display: none;
+  }
 }
 
 .header__nav-button {
   position: relative;
   display: block;
   padding: 10px;
+  z-index: 2;
 }
 
 .header__nav-toggle {
@@ -55,7 +113,6 @@
   height: 40px;
   cursor: pointer;
   opacity: 0;
-  z-index: 1;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -127,18 +184,18 @@
 }
 
 .header__nav-list {
-  position: absolute;
-  display: flex;
+  // position: absolute;
   flex-direction: column;
 
-  top: 60px;
-  left: 0px;
-  right: 0px;
+  top: 0;
+  left: 0;
+  right: 0;
 
   list-style: none;
   background-color: #ffffff;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
 }
 
 .header__nav-item {
