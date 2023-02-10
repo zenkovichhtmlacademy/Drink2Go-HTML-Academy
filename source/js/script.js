@@ -1,7 +1,7 @@
 const navMain = document.querySelector('.header__nav');
 const navToggle = document.querySelector('.header__nav-toggle');
 const body = document.querySelector('.page__body');
-const headerContainer = document.querySelector('header__container');
+const headerContainer = document.querySelector('.header__container');
 
 // navMain.classList.remove('header__nav--nojs');
 headerContainer.classList.remove('header__container--nojs')

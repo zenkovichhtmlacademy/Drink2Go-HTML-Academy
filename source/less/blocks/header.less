@@ -1,58 +1,77 @@
 .header {
   position: static;
-  min-height: @header-height;
+  min-height: @header-mobile-height;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
   background-color: #ffffff;
+
+  @media (min-width: @tablet-width) {
+    min-height: @header-tablet-height;
+  }
 }
 
 .header__container {
-  position: relative;
+  position: fixed;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 0;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 20px;
+  }
 }
 
 .header__logo-wrapper{
   padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .header__logo {
   display: block;
   box-sizing: border-box;
-
   line-height: 0;
-
   padding-top: 12px;
   padding-bottom: 12px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
 }
 
 .header__title {
   display: none;
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     display: block;
+    font-family: "Montserrat", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    min-width: 126px;
   }
 }
 
-.header__nav-wrapper {
-  display: flex;
-}
-
 .header__nav {
-  position: static;
-  // display: flex;
-  // flex-direction: row-reverse;
+  position: absolute;
   top: -100%;
   left: 0;
   right: 0;
@@ -62,17 +81,24 @@
 
   overflow: auto;
   width: 100%;
-  height: 100%;
   z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    position: static;
+    display: flex;
+    justify-content: space-around;
+    opacity: 1;
+  }
 }
 
 .header__nav--opened {
-  top: @header-height;
+  top: @header-mobile-height;
   opacity: 1;
 }
 
 @media (max-width: @tablet-width - 1) {
   .header__container--nojs {
+    position: relative;
     display: grid;
     grid-template-areas:
     'logo usernav'
@@ -102,6 +128,10 @@
   display: block;
   padding: 10px;
   z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .header__nav-toggle {
@@ -184,7 +214,6 @@
 }
 
 .header__nav-list {
-  // position: absolute;
   flex-direction: column;
 
   top: 0;
@@ -196,19 +225,31 @@
   margin: 0;
   padding: 0;
   z-index: -1;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 .header__nav-item {
-  border-top: 1px solid #F0EBFF;
+  @media (max-width: @tablet-width - 1) {
+    border-top: 1px solid #F0EBFF;
 
-  &:last-child {
-    border-bottom: 1px solid #F0EBFF;
+    &:last-child {
+      border-bottom: 1px solid #F0EBFF;
+    }
+  }
+}
+
+.header__nav-item--current .header__nav-link {
+  @media (min-width: @tablet-width) {
+    box-shadow: inset 0 -2px @base-primary;
   }
 }
 
 .header__nav-link {
   display: block;
-
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -221,6 +262,22 @@
   text-decoration: none;
 
   padding: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 32px 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.header__nav-user {
+  margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .header__nav-user-list {
@@ -232,21 +289,39 @@
 
 .header__nav-user-link {
   display: block;
-
   font-family: "Montserrat", "Arial", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
-  line-height: 0px;
+  line-height: 0;
   letter-spacing: 0.02em;
   color: #333333;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-
   padding: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header__nav-user-icon {
+  @media (min-width: @desktop-width) {
+    margin-right: 8px;
+  }
 }
 
 .header__nav-user-title {
   display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
 }
