@@ -96,6 +96,12 @@
   opacity: 1;
 }
 
+.header__nav--closed .header__nav-list {
+  @media (max-width: @tablet-width - 1) {
+    display: none;
+  }
+}
+
 @media (max-width: @tablet-width - 1) {
   .header__container--nojs {
     position: relative;

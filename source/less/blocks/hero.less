@@ -1,0 +1,147 @@
+.hero {
+
+}
+
+.hero__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero__item {
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 20px 60px;
+}
+
+.hero__item-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hero__item-background--first {
+  background-color: @flat-white;
+}
+
+.hero__item-background--second {
+  background-color: @lavender-latte;
+}
+
+.hero__item-background--third {
+  background-color: @espresso;
+}
+
+.hero__item-image-link {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.hero__item-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero__item-title-link{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: @base-black;
+  order: 1;
+}
+
+.hero__item-title {
+  margin: 0;
+  margin-bottom: 10px;
+  width: 280px;
+}
+
+.hero__item-subtitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: @base-primary;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 4px;
+  order: 0;
+}
+
+.hero__item-description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #333333;
+  margin: 0;
+  margin-bottom: 20px;
+  width: 280px;
+  order: 2;
+}
+
+.hero__item-button-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  order: 3;
+}
+
+.hero__item-price {
+  font-family: 'Montserrat';
+font-style: normal;
+line-height: 32px;
+
+}
+
+.hero__item-price--regular {
+  font-weight: 400;
+  text-decoration-line: line-through;
+  font-size: 16px;
+  color: @base-primary;
+  margin-right: 6px;
+}
+
+.hero__item-price--sale{
+  font-weight: 600;
+  font-size: 20px;
+  color: @base-black;
+  margin-right: 20px;
+}
+
+.hero__item-button {
+  display: block;
+  box-sizing: border-box;
+  background-color: @base-primary;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none;
+  min-width: 113px;
+  min-height: 40px;
+  padding: 8px 8px;
+  border-radius: 4px;
+}
