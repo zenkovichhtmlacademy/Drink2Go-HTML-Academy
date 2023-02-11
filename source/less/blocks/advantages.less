@@ -1,0 +1,102 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 50px 20px 60px;
+}
+
+.advantages__title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: @base-black;
+  text-align: center;
+  width: 100%;
+  order: 1;
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.advantages__subtitle {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  color: @base-primary;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 4px;
+  order: 0;
+}
+
+.advantages__list {
+  display: grid;
+  row-gap: 32px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  order: 2;
+}
+
+.advantages__item {
+  position: relative;
+  padding-top: 66px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    width: 52px;
+    height: 56px;
+    margin: auto;
+  }
+}
+
+.advantages__item--speed::before {
+  background-image: url(/img/feature-icon-speed.svg);
+}
+
+.advantages__item--fit::before {
+  background-image: url(/img/feature-icon-fit.svg);
+}
+
+.advantages__item--energy::before {
+  background-image: url(/img/feature-icon-energy.svg);
+}
+
+.advantages__item--eco::before {
+  background-image: url(/img/feature-icon-eco.svg);
+}
+
+.advantages__item-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: @base-black;
+  margin: 0;
+  margin-bottom: 4px;
+}
+
+.advantages__item-description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: @base-black;
+  margin: 0;
+}
