@@ -238,9 +238,9 @@
 
       <section class="catalog">
         <div class="catalog__heading">
-          <h2 class="catalog__title">Каталог кофейных напитков</h2>
-
           <span class="catalog__subtitle">Каталог</span>
+
+          <h2 class="catalog__title">Каталог кофейных напитков</h2>
         </div>
 
         <div class="catalog__form-wrapper">
@@ -259,9 +259,11 @@
                 </div>
               </div>
 
-              <input class="price-form__min" type="number" autocomplete="off" name="min-price" value="0" min="0" max="999">
-              <div class="price-form__divider"></div>
-              <input class="price-form__max" type="number" autocomplete="off" name="max-price" value="900" min="1" max="1000">
+              <div class="price-form__input-wrapper">
+                <input class="price-form__input price-form__input--min" type="number" autocomplete="off" name="min-price" value="0" min="0" max="999">
+                <div class="price-form__divider"></div>
+                <input class="price-form__input price-form__input--max" type="number" autocomplete="off" name="max-price" value="900" min="1" max="1000">
+              </div>
             </fieldset>
 
             <fieldset class="form__fieldset radio-form">
@@ -303,7 +305,7 @@
             </fieldset>
 
             <fieldset class="form__fieldset checkbox-form">
-              <legend class="form__legend">Страна производства</legend>
+              <legend class="form__legend">Страна произрастания</legend>
 
               <ul class="checkbox-form__list">
                 <li class="checkbox-form__item">
@@ -348,20 +350,24 @@
               </ul>
             </fieldset>
 
-            <button class="form__button form__button--submit" type="submit">Применить фильтр</button>
-            <button class="form__button form__button--reset" type="reset">Сбросить фильтр</button>
+            <div class="form__button-wrapper">
+              <button class="form__button form__button--submit" type="submit">Применить фильтр</button>
+              <button class="form__button form__button--reset" type="reset">Сбросить фильтр</button>
+            </div>
           </form>
         </div>
 
         <div class="catalog__results-wrapper">
-          <label class="catalog__sort-label" for="sort-order">Сортировка:</label>
+          <div class="catalog__sort-wrapper">
+            <label class="catalog__sort-label" for="sort-order">Сортировка:</label>
 
-          <select class="catalog__sort select" name="sort-order" id="sort-order">
-            <option class="select__option" value="default">по умолчанию</option>
-            <option class="select__option" value="expensive">сначала дорогие</option>
-            <option class="select__option" value="cheap">сначала дешёвые</option>
-            <option class="select__option" value="highrate">высокий рейтинг</option>
-          </select>
+            <select class="catalog__sort select" name="sort-order" id="sort-order">
+              <option class="select__option" value="default">по умолчанию</option>
+              <option class="select__option" value="expensive">сначала дорогие</option>
+              <option class="select__option" value="cheap">сначала дешёвые</option>
+              <option class="select__option" value="highrate">высокий рейтинг</option>
+            </select>
+          </div>
 
           <div class="catalog__results">
             <h3 class="visually-hidden">Результаты поиска.</h3>
