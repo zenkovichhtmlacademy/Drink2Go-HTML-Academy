@@ -61,10 +61,15 @@
   justify-content: flex-start;
 }
 
+.catalog__results-wrapper {
+  width: 100%;
+}
+
 .catalog__sort-wrapper {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 165px;
   align-items: center;
-  justify-content: center;
   width: 100%;
 }
 
@@ -76,12 +81,4 @@
   line-height: 24px;
   color: @base-black;
   margin: 0;
-  margin-right: 8px;
 }
-
-// .catalog__sort {
-//   display: block;
-//   box-sizing: border-box;
-//   min-width: 165px;
-//   min-height: 32px;
-// }

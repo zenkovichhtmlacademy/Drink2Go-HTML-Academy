@@ -359,14 +359,51 @@
 
         <div class="catalog__results-wrapper">
           <div class="catalog__sort-wrapper">
-            <label class="catalog__sort-label" for="sort-order">Сортировка:</label>
+            <span class="catalog__sort-label" for="sort-order">Сортировка:</span>
 
-            <select class="catalog__sort select" name="sort-order" id="sort-order">
-              <option class="select__option" value="default">по умолчанию</option>
-              <option class="select__option" value="expensive">сначала дорогие</option>
-              <option class="select__option" value="cheap">сначала дешёвые</option>
-              <option class="select__option" value="highrate">высокий рейтинг</option>
-            </select>
+            <div class="catalog__sort custom-select custom-select--nojs">
+              <div class="custom-select__current">
+                <label class="custom-select__current-button">
+                  <span class="visually-hidden">Текущий тип сортировки:</span>
+                  <span class="custom-select__current-label">по умолчанию</span>
+
+                  <input class="custom-select__toggle custom-select__toggle--unchecked" type="checkbox" name="select-toggle">
+
+                  <div class="custom-select__arrow"></div>
+                </label>
+              </div>
+
+              <!-- Для отображения меню заменить модификатор объекта custom-select__option-list с closed на opened -->
+              <ul class="custom-select__option-list custom-select__option-list--opened">
+                <li class="custom-select__option-item">
+                  <label class="custom-select__control">
+                    <input class="custom-select__input visually-hidden" type="radio" name="sort-order" value="default" checked>
+                    <span class="custom-select__title">по умолчанию</span>
+                  </label>
+                </li>
+
+                <li class="custom-select__option-item">
+                  <label class="custom-select__control">
+                    <input class="custom-select__input visually-hidden" type="radio" name="sort-order" value="expensive">
+                    <span class="custom-select__title">сначала дорогие</span>
+                  </label>
+                </li>
+
+                <li class="custom-select__option-item">
+                  <label class="custom-select__control">
+                    <input class="custom-select__input visually-hidden" type="radio" name="sort-order" value="cheap">
+                    <span class="custom-select__title">сначала дешёвые</span>
+                  </label>
+                </li>
+
+                <li class="custom-select__option-item">
+                  <label class="custom-select__control">
+                    <input class="custom-select__input visually-hidden" type="radio" name="sort-order" value="highrate">
+                    <span class="custom-select__title">высокий рейтинг</span>
+                  </label>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="catalog__results">
