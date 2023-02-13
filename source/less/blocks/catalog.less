@@ -70,7 +70,9 @@
   display: grid;
   grid-template-columns: auto 165px;
   align-items: center;
+  justify-content: end;
   width: 100%;
+  margin-bottom: 16px;
 }
 
 .catalog__sort-label {
@@ -81,4 +83,14 @@
   line-height: 24px;
   color: @base-black;
   margin: 0;
+}
+
+.catalog__results-list {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-row-gap: 20px;
+  list-style: none;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
 }
