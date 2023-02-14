@@ -1,7 +1,9 @@
 .pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 40px auto 40px;
+  grid-template-rows: 40px;
+  grid-column-gap: 20px;
+  grid-template-areas: 'prev-button pages next-button';
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -10,8 +12,107 @@
   text-align: center;
   color: @base-primary;
   width: 100%;
-  max-width: 395px;
+  max-width: 280px;
   margin: 0;
   margin-left: auto;
   padding: 0;
+}
+
+.pagination__previous {
+  display: block;
+  grid-area: prev-button;
+  text-decoration: none;
+  background-color: @base-white;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.pagination__previous--show {
+  display: block;
+}
+
+.pagination__previous--hide {
+  display: none;
+}
+
+.pagination__previous-label {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.pagination__previous-icon {
+  display: block;
+  background-image: url('/img/pagination-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  line-height: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  justify-content: space-between;
+  grid-area: pages;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination__item {
+  background-color: @base-white;
+  border-radius: 4px;
+  color: @base-primary;
+}
+
+.pagination__item--current {
+  background-color: transparent;
+  font-weight: 600;
+  color: @base-black;
+}
+
+.pagination__page {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  color: inherit;
+  min-width: 40px;
+  padding: 8px;
+
+}
+
+.pagination__next {
+  display: block;
+  grid-area: next-button;
+  text-decoration: none;
+  background-color: @base-white;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.pagination__next--show {
+  display: block;
+}
+
+.pagination__next--hide {
+  display: none;
+}
+
+.pagination__next-icon {
+  display: block;
+  background-image: url('/img/pagination-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  line-height: 0;
+  transform: rotateZ(180deg);
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

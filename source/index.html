@@ -546,7 +546,8 @@
             <nav class="catalog__results-pagination pagination">
               <h3 class="visually-hidden">Выбор страницы каталога.</h3>
 
-              <a class="pagination__previous pagination-button" href="#">
+              <!-- Для скрытия кнопки заменить модификатор pagination__previous с show на hide -->
+              <a class="pagination__previous pagination__previous--show" href="#">
                 <span class="pagination__previous-icon">
                   <svg width="10" height="10" fill="currentColor">
                     <title>Назад.</title>
@@ -557,20 +558,22 @@
               </a>
 
               <ul class="pagination__list">
+                <!-- Для стилизации кнопки текущей страницы добавить модификатор current элементу списка  pagination__item -->
                 <li class="pagination__item">
-                  <a class="pagination-button" href="#">1</a>
+                  <a class="pagination__page" href="#">1</a>
                 </li>
 
                 <li class="pagination__item pagination__item--current">
-                  <a class="pagination-button">2</a>
+                  <a class="pagination__page">2</a>
                 </li>
 
                 <li class="pagination__item">
-                  <a class="pagination-button" href="#">3</a>
+                  <a class="pagination__page" href="#">3</a>
                 </li>
               </ul>
 
-              <a class="pagination__next pagination-button" href="#">
+              <!-- Для скрытия кнопки заменить модификатор pagination__next с show на hide -->
+              <a class="pagination__next pagination__next--show" href="#">
                 <span class="pagination__next-icon">
                   <svg width="10" height="10" fill="currentColor">
                     <title>Вперёд.</title>
