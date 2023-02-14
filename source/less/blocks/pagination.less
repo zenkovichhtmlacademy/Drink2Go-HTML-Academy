@@ -12,10 +12,13 @@
   text-align: center;
   color: @base-primary;
   width: 100%;
-  max-width: 280px;
   margin: 0;
   margin-left: auto;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 91px auto 91px;
+  }
 }
 
 .pagination__previous {
@@ -25,6 +28,10 @@
   background-color: @base-white;
   padding: 15px;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 20px;
+  }
 }
 
 .pagination__previous--show {
@@ -94,6 +101,10 @@
   background-color: @base-white;
   padding: 15px;
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    padding: 8px 20px;
+  }
 }
 
 .pagination__next--show {

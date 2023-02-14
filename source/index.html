@@ -37,6 +37,7 @@
           <h2 class="visually-hidden">Пользовательское меню.</h2>
 
           <ul class="header__nav-user-list">
+            <!-- Для стилизации текущего раздела добавить модификатор current к элементу header__nav-user-item -->
             <li class="header__nav-user-item header__nav-user-item--current">
               <a class="header__nav-user-link" href="#">
                 <svg class="header__nav-user-icon" width="16" height="16" fill="currentColor">
@@ -247,108 +248,110 @@
           <h3 class="visually-hidden">Фильтр каталога.</h3>
 
           <form class="catalog__form form" action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="form__fieldset price-form">
-              <legend class="form__legend">Цена</legend>
+            <div class="form__fieldset-wrapper">
+              <fieldset class="form__fieldset price-form">
+                <legend class="form__legend">Цена</legend>
 
-              <div class="price-form__scale scale">
-                <div class="scale__bar">
-                  <div class="scale__range">
-                    <button class="scale__button scale__button--min" type="button" name="button-min"></button>
-                    <button class="scale__button scale__button--max" type="button" name="button-max"></button>
+                <div class="price-form__scale scale">
+                  <div class="scale__bar">
+                    <div class="scale__range">
+                      <button class="scale__button scale__button--min" type="button" name="button-min"></button>
+                      <button class="scale__button scale__button--max" type="button" name="button-max"></button>
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="price-form__input-wrapper">
-                <input class="price-form__input price-form__input--min" type="number" autocomplete="off" name="min-price" value="0" min="0" max="999">
-                <div class="price-form__divider"></div>
-                <input class="price-form__input price-form__input--max" type="number" autocomplete="off" name="max-price" value="900" min="1" max="1000">
-              </div>
-            </fieldset>
+                <div class="price-form__input-wrapper">
+                  <input class="price-form__input price-form__input--min" type="number" autocomplete="off" name="min-price" value="" placeholder="0" min="0" max="999">
+                  <div class="price-form__divider"></div>
+                  <input class="price-form__input price-form__input--max" type="number" autocomplete="off" name="max-price" value="900" placeholder="1000" min="1" max="1000">
+                </div>
+              </fieldset>
 
-            <fieldset class="form__fieldset radio-form">
-              <legend class="form__legend">Наличие молока</legend>
+              <fieldset class="form__fieldset radio-form">
+                <legend class="form__legend">Наличие молока</legend>
 
-              <ul class="radio-form__list">
-                <li class="radio-form__item">
-                  <label class="radio-form__control custom-radio">
-                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="not-matter" checked>
-                    <span class="custom-radio__mark"></span>
-                    <span class="custom-radio__title input-label-text">Неважно</span>
-                  </label>
-                </li>
+                <ul class="radio-form__list">
+                  <li class="radio-form__item">
+                    <label class="radio-form__control custom-radio">
+                      <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="not-matter" checked>
+                      <span class="custom-radio__mark"></span>
+                      <span class="custom-radio__title input-label-text">Неважно</span>
+                    </label>
+                  </li>
 
-                <li class="radio-form__item">
-                  <label class="radio-form__control custom-radio">
-                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="only-animals-milk">
-                    <span class="custom-radio__mark"></span>
-                    <span class="custom-radio__title input-label-text">Только животное</span>
-                  </label>
-                </li>
+                  <li class="radio-form__item">
+                    <label class="radio-form__control custom-radio">
+                      <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="only-animals-milk">
+                      <span class="custom-radio__mark"></span>
+                      <span class="custom-radio__title input-label-text">Только животное</span>
+                    </label>
+                  </li>
 
-                <li class="radio-form__item">
-                  <label class="radio-form__control custom-radio">
-                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="only-vegetable-milk">
-                    <span class="custom-radio__mark"></span>
-                    <span class="custom-radio__title input-label-text">Только растительное</span>
-                  </label>
-                </li>
+                  <li class="radio-form__item">
+                    <label class="radio-form__control custom-radio">
+                      <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="only-vegetable-milk">
+                      <span class="custom-radio__mark"></span>
+                      <span class="custom-radio__title input-label-text">Только растительное</span>
+                    </label>
+                  </li>
 
-                <li class="radio-form__item">
-                  <label class="radio-form__control custom-radio">
-                    <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="without-milk" disabled>
-                    <span class="custom-radio__mark"></span>
-                    <span class="custom-radio__title input-label-text">Без молока</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+                  <li class="radio-form__item">
+                    <label class="radio-form__control custom-radio">
+                      <input class="custom-radio__input visually-hidden" type="radio" name="milk-type" value="without-milk" disabled>
+                      <span class="custom-radio__mark"></span>
+                      <span class="custom-radio__title input-label-text">Без молока</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
 
-            <fieldset class="form__fieldset checkbox-form">
-              <legend class="form__legend">Страна произрастания</legend>
+              <fieldset class="form__fieldset checkbox-form">
+                <legend class="form__legend">Страна произрастания</legend>
 
-              <ul class="checkbox-form__list">
-                <li class="checkbox-form__item">
-                  <label class="checkbox-form__control custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="brazil" checked>
-                    <span class="custom-checkbox__mark"></span>
-                    <span class="custom-checkbox__title input-label-text">Бразилия</span>
-                  </label>
-                </li>
+                <ul class="checkbox-form__list">
+                  <li class="checkbox-form__item">
+                    <label class="checkbox-form__control custom-checkbox">
+                      <input class="custom-checkbox__input visually-hidden" type="checkbox" name="brazil" checked>
+                      <span class="custom-checkbox__mark"></span>
+                      <span class="custom-checkbox__title input-label-text">Бразилия</span>
+                    </label>
+                  </li>
 
-                <li class="checkbox-form__item">
-                  <label class="checkbox-form__control custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="ethiopia">
-                    <span class="custom-checkbox__mark"></span>
-                    <span class="custom-checkbox__title input-label-text">Эфиопия</span>
-                  </label>
-                </li>
+                  <li class="checkbox-form__item">
+                    <label class="checkbox-form__control custom-checkbox">
+                      <input class="custom-checkbox__input visually-hidden" type="checkbox" name="ethiopia">
+                      <span class="custom-checkbox__mark"></span>
+                      <span class="custom-checkbox__title input-label-text">Эфиопия</span>
+                    </label>
+                  </li>
 
-                <li class="checkbox-form__item">
-                  <label class="checkbox-form__control custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="colombia">
-                    <span class="custom-checkbox__mark"></span>
-                    <span class="custom-checkbox__title input-label-text">Колумбия</span>
-                  </label>
-                </li>
+                  <li class="checkbox-form__item">
+                    <label class="checkbox-form__control custom-checkbox">
+                      <input class="custom-checkbox__input visually-hidden" type="checkbox" name="colombia">
+                      <span class="custom-checkbox__mark"></span>
+                      <span class="custom-checkbox__title input-label-text">Колумбия</span>
+                    </label>
+                  </li>
 
-                <li class="checkbox-form__item">
-                  <label class="checkbox-form__control custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="costa-rica">
-                    <span class="custom-checkbox__mark"></span>
-                    <span class="custom-checkbox__title input-label-text">Коста-Рика</span>
-                  </label>
-                </li>
+                  <li class="checkbox-form__item">
+                    <label class="checkbox-form__control custom-checkbox">
+                      <input class="custom-checkbox__input visually-hidden" type="checkbox" name="costa-rica">
+                      <span class="custom-checkbox__mark"></span>
+                      <span class="custom-checkbox__title input-label-text">Коста-Рика</span>
+                    </label>
+                  </li>
 
-                <li class="checkbox-form__item">
-                  <label class="checkbox-form__control custom-checkbox">
-                    <input class="custom-checkbox__input visually-hidden" type="checkbox" name="peru" disabled>
-                    <span class="custom-checkbox__mark"></span>
-                    <span class="custom-checkbox__title input-label-text">Перу</span>
-                  </label>
-                </li>
-              </ul>
-            </fieldset>
+                  <li class="checkbox-form__item">
+                    <label class="checkbox-form__control custom-checkbox">
+                      <input class="custom-checkbox__input visually-hidden" type="checkbox" name="peru" disabled>
+                      <span class="custom-checkbox__mark"></span>
+                      <span class="custom-checkbox__title input-label-text">Перу</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
 
             <div class="form__button-wrapper">
               <button class="form__button form__button--submit" type="submit">Применить фильтр</button>

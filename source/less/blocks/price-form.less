@@ -17,7 +17,7 @@
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: @base-gray;
+  color: @base-black;
   padding: 7px 10px;
   width: 118px;
   height: 38px;
@@ -25,6 +25,27 @@
   border: 2px solid @primary-lighter;
   appearance: none;
   -moz-appearance: textfield;
+  outline: none;
+
+  &::placeholder {
+    color: @base-gray;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @lightest-gray;
+    border-color: @light-gray;
+    color: @base-gray;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 93px;
+  }
 }
 
 .price-form__input::-webkit-outer-spin-button,
