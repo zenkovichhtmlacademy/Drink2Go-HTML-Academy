@@ -9,6 +9,10 @@
     justify-content: space-between;
     margin-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+  }
 }
 
 .form__fieldset {
@@ -28,6 +32,11 @@
   @media (min-width: @tablet-width) {
     width: 220px;
     margin: 0;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
@@ -40,6 +49,10 @@
   color: @base-black;
   margin-bottom: 22px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__button-wrapper {
