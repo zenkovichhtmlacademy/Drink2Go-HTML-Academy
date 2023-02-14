@@ -146,6 +146,15 @@
   text-decoration: none;
   color: @base-black;
   width: fit-content;
+
+  &:hover,
+  &:focus {
+    color: @primary-lighter;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
 }
 
 .footer__credits {
@@ -181,6 +190,15 @@
   color: inherit;
   text-decoration: inherit;
   text-transform: inherit;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
 }
 
 .footer__credits-link-label {

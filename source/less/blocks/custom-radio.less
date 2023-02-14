@@ -20,7 +20,24 @@
   cursor: pointer;
 }
 
-.custom-radio__input:checked + .custom-radio__mark {
+.custom-radio__input:not([disabled]):hover + .custom-radio__mark,
+.custom-radio__input:not([disabled]):focus + .custom-radio__mark {
+  border-color: @primary-lighter;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: @primary-opacity;
+    border-radius: 50%;
+    content: "";
+  }
+}
+
+.custom-radio__input:not([disabled]):checked + .custom-radio__mark {
   border-color: @base-primary;
 
   &::before {
@@ -45,4 +62,20 @@
   background-color: @lightest-gray;
   color: @base-gray;
   cursor: default;
+}
+
+.custom-radio__input[disabled]:checked + .custom-radio__mark {
+  border-color: @light-gray;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background-color: @light-gray;
+    border-radius: 50%;
+    content: "";
+  }
 }

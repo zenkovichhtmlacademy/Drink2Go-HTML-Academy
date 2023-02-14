@@ -209,4 +209,17 @@ line-height: 32px;
   min-height: 40px;
   padding: 8px 8px;
   border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @base-gray;
+  }
 }

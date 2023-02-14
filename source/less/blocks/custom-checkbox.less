@@ -1,6 +1,5 @@
 .custom-checkbox {
   position: relative;
-  // display: block;
   padding-left: 52px;
   outline: none;
 }
@@ -15,7 +14,7 @@
   background-color: @base-gray;
   border-radius: 12px;
   cursor: pointer;
-  transition: all .4s ease-in-out;
+  transition: all .2s ease-in-out;
 
   &::before {
     position: absolute;
@@ -36,6 +35,12 @@
   cursor: pointer;
 }
 
+.custom-checkbox__input:hover + .custom-checkbox__mark,
+.custom-checkbox__input:focus + .custom-checkbox__mark {
+  background-color: @primary-opacity;
+  border-color: @primary-lighter;
+}
+
 .custom-checkbox__input:checked + .custom-checkbox__mark {
   background-color: @base-primary;
   border-color: @base-primary;
@@ -52,6 +57,16 @@
 
   &::before {
     background-color: @lightest-gray;
+  }
+}
+
+.custom-checkbox__input[disabled]:checked ~ .custom-checkbox__mark {
+  background-color: @light-gray;
+  border-color: @light-gray;
+  cursor: default;
+
+  &::before {
+    background-color: @base-gray;
   }
 }
 

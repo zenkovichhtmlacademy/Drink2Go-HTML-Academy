@@ -103,6 +103,20 @@
   @media (min-width: @tablet-width) {
     width: 148px;
   }
+
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @base-gray;
+  }
 }
 
 .form__button--reset {
@@ -111,5 +125,21 @@
 
   @media (min-width: @tablet-width) {
     width: 138px;
+  }
+
+  &:hover,
+  &:focus {
+    color: @base-white;
+    background-color: @primary-lighter;
+  }
+
+  &:active {
+    color: @base-white;
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    color: @base-white;
+    background-color: @base-gray;
   }
 }
