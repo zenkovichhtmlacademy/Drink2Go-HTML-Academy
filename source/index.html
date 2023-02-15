@@ -98,8 +98,10 @@
     <main class="main">
       <section class="hero">
         <h2 class="visually-hidden">Попробуйте наши новинки!</h2>
-          <ul class="hero__list">
-            <li class="hero__item">
+
+        <ul class="hero__list">
+          <li class="hero__item hero__item--show">
+            <div class="hero__item-container">
               <div class="hero__item-background hero__item-background--first"></div>
 
               <a class="hero__item-image-link" href="#">
@@ -132,9 +134,11 @@
                   <a class="hero__item-button" href="#">Заказать</a>
                 </div>
               </div>
-            </li>
+            </div>
+          </li>
 
-            <li class="hero__item">
+          <li class="hero__item">
+            <div class="hero__item-container">
               <div class="hero__item-background hero__item-background--second"></div>
 
               <a class="hero__item-image-link" href="#">
@@ -166,9 +170,11 @@
                   <a class="hero__item-button" href="#">Заказать</a>
                 </div>
               </div>
-            </li>
+            </div>
+          </li>
 
-            <li class="hero__item">
+          <li class="hero__item">
+            <div class="hero__item-container">
               <div class="hero__item-background hero__item-background--third"></div>
 
               <a class="hero__item-image-link" href="#">
@@ -201,8 +207,24 @@
                   <a class="hero__item-button" href="#">Заказать</a>
                 </div>
               </div>
-            </li>
-          </ul>
+            </div>
+          </li>
+        </ul>
+
+        <a class="hero__button hero__button--prev" href="#">
+          <span class="visually-hidden">Показать предыдущий слайд.</span>
+          <svg class="hero__button-icon" fill="currentColor">
+            <use href="img/icons/stack.svg#hero-button-icon"></use>
+          </svg>
+        </a>
+
+        <a class="hero__button hero__button--next" href="#">
+          <span class="visually-hidden">Показать следующий слайд.</span>
+          <svg class="hero__button-icon" fill="currentColor">
+            <use href="img/icons/stack.svg#hero-button-icon"></use>
+          </svg>
+        </a>
+
 
 
       </section>
