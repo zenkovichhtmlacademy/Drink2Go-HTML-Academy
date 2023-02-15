@@ -1,4 +1,4 @@
-.pagination {
+.catalog-pagination {
   display: grid;
   grid-template-columns: 40px auto 40px;
   grid-template-rows: 40px;
@@ -21,7 +21,7 @@
   }
 }
 
-.pagination__previous {
+.catalog-pagination__previous {
   display: block;
   grid-area: prev-button;
   text-decoration: none;
@@ -51,15 +51,15 @@
   }
 }
 
-.pagination__previous--show {
+.catalog-pagination__previous--show {
   display: block;
 }
 
-.pagination__previous--hide {
+.catalog-pagination__previous--hide {
   display: none;
 }
 
-.pagination__previous-label {
+.catalog-pagination__previous-label {
   display: none;
 
   @media (min-width: @tablet-width) {
@@ -67,7 +67,7 @@
   }
 }
 
-.pagination__previous-icon {
+.catalog-pagination__previous-icon {
   display: block;
   line-height: 0;
 
@@ -76,7 +76,7 @@
   }
 }
 
-.pagination__list {
+.catalog-pagination__list {
   display: flex;
   justify-content: space-between;
   grid-area: pages;
@@ -85,20 +85,20 @@
   padding: 0;
 }
 
-.pagination__item {
+.catalog-pagination__item {
   background-color: @base-white;
   border-radius: 4px;
   color: @base-primary;
 }
 
-.pagination__item--current {
+.catalog-pagination__item--current {
   background-color: transparent;
   font-weight: 600;
   color: @base-black;
 
 }
 
-.pagination__page {
+.catalog-pagination__page {
   display: block;
   box-sizing: border-box;
   text-decoration: none;
@@ -109,8 +109,8 @@
   border-radius: 4px;
 }
 
-.pagination__item:not(.pagination__item--current)
-.pagination__page {
+.catalog-pagination__item:not(.catalog-pagination__item--current)
+.catalog-pagination__page {
   &:hover,
   &:focus {
     color: @base-white;
@@ -128,7 +128,7 @@
   }
 }
 
-.pagination__next {
+.catalog-pagination__next {
   display: block;
   grid-area: next-button;
   text-decoration: none;
@@ -158,15 +158,15 @@
   }
 }
 
-.pagination__next--show {
+.catalog-pagination__next--show {
   display: block;
 }
 
-.pagination__next--hide {
+.catalog-pagination__next--hide {
   display: none;
 }
 
-.pagination__next-icon {
+.catalog-pagination__next-icon {
   display: block;
   line-height: 0;
   transform: rotateZ(180deg);
