@@ -1,14 +1,24 @@
 .catalog {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   background-color: @lightest-gray;
   padding: 50px 20px 44px;
 
   @media (min-width: @tablet-width) {
     padding: 80px 20px 90px;
   }
+
+  @media (min-width: @desktop-width) {
+padding: 100px 40px 120px;
+  }
+}
+
+.catalog__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 
   @media (min-width: @desktop-width) {
     display: grid;
@@ -18,7 +28,6 @@
     grid-template-columns: 318px auto;
     grid-template-rows: auto;
     grid-column-gap: 30px;
-    padding: 100px 40px 120px;
   }
 }
 
